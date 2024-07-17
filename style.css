@@ -1,0 +1,103 @@
+/*imports*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+html {
+  scroll-behavior: smooth; /* Enable smooth scrolling */
+}
+
+body {
+  font-family: sans-serif;  
+  margin: 0;
+  padding: 0;
+}
+
+#about-me {
+  max-width: 800px;
+  padding: 10px;
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 20px;
+  text-align: center;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+#portrait { 
+  width: 150px !important; /* Set the desired width for the smaller image */
+  height: auto !important; /* Maintain aspect ratio */
+  display: block !important; /* Ensure the image is displayed as a block element */
+  margin: 0 auto !important; /* Center the image */
+  padding: 0 !important; /* Remove default padding */
+}
+
+nav {
+  background-color: #080101;
+  padding: 10px;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+main {
+  padding: 20px;
+}
+
+.section {
+  margin-bottom: 40px;
+}
+
+.portfolio-item {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.portfolio-item img {
+  width: 100%; /* Full width for responsive design */
+  max-width: 600px; /* Limit max width for larger images */
+}
+
+.portfolio-item.large img {
+  max-width: 600px; /* Larger width for the first image */
+}
+
+.portfolio-item.small img {
+  max-width: 300px; /* Smaller width for other images */
+}
+
+.portfolio-item h3 {
+  text-align: center;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  #portrait {
+    width: 100px; /* Smaller image on smaller screens */
+  }
+
+  .portfolio-item img,
+  .portfolio-item.small img {
+    max-width: 100%;
+  }
+}
