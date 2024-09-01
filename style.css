@@ -1,23 +1,24 @@
-/*imports*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
+:root {
+  --primary-bg-color: #080101;
+  --secondary-bg-color: #f1f1f1;
+  --primary-text-color: white;
+  --font-family: 'Bebas Neue', sans-serif;
+}
+
 html {
-  scroll-behavior: smooth; /* Enable smooth scrolling */
+  scroll-behavior: smooth; 
 }
 
 body {
-  font-family: sans-serif;  
+  font-family: var(--font-family);
   margin: 0;
   padding: 0;
 }
 
-#about-me {
-  max-width: 800px;
-  padding: 10px;
-}
-
 header {
-  background-color: #f1f1f1;
+  background-color: var(--secondary-bg-color);
   padding: 20px;
   text-align: center;
 }
@@ -26,16 +27,30 @@ h1, h2 {
   margin: 0;
 }
 
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+#about-me {
+  max-width: 800px;
+  padding: 10px;
+  margin: 0 auto; 
+}
+
 #portrait { 
-  width: 150px !important; /* Set the desired width for the smaller image */
-  height: auto !important; /* Maintain aspect ratio */
-  display: block !important; /* Ensure the image is displayed as a block element */
-  margin: 0 auto !important; /* Center the image */
-  padding: 0 !important; /* Remove default padding */
+  width: 150px; 
+  height: auto; 
+  display: block; 
+  margin: 0 auto; 
+  padding: 0; 
 }
 
 nav {
-  background-color: #080101;
+  background-color: var(--primary-bg-color);
   padding: 10px;
 }
 
@@ -43,17 +58,17 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  text-align: center;
+  display: flex; 
+  justify-content: center; 
 }
 
 nav ul li {
-  display: inline-block;
   margin: 0 10px;
 }
 
 nav ul li a {
   text-decoration: none;
-  color: white;
+  color: var(--primary-text-color);
 }
 
 main {
@@ -67,19 +82,22 @@ main {
 .portfolio-item {
   margin-bottom: 20px;
   text-align: center;
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
 }
 
 .portfolio-item img {
-  width: 100%; /* Full width for responsive design */
-  max-width: 600px; /* Limit max width for larger images */
+  width: 100%; 
+  max-width: 600px; 
 }
 
 .portfolio-item.large img {
-  max-width: 600px; /* Larger width for the first image */
+  max-width: 600px; 
 }
 
 .portfolio-item.small img {
-  max-width: 300px; /* Smaller width for other images */
+  max-width: 300px; 
 }
 
 .portfolio-item h3 {
@@ -90,14 +108,18 @@ h2 {
   margin-bottom: 10px;
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
   #portrait {
-    width: 100px; /* Smaller image on smaller screens */
+    width: 100px; /
+  }
+
+  nav ul {
+    flex-direction: column; 
   }
 
   .portfolio-item img,
   .portfolio-item.small img {
-    max-width: 100%;
+    max-width: 100%; 
   }
 }
